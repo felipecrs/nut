@@ -86,6 +86,13 @@ def first():
 	for id, user in users.items():
 		return user
 	return None
+	
+def find_user_by_credentials(username, password):
+    for user in users.values():
+        if user.id == username and user.password == password:
+            return user
+    return None
+
 
 def auth(id, password, address):
 	#print('Authing: ' + str(id) + ' - ' + str(password) + ', ' + str(address))
